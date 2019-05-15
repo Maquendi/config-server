@@ -1,0 +1,55 @@
+---
+# changing tomcat server port
+server:
+  port: 8888
+  
+#can disable basic auth added by spring security starter..
+security:
+  basic:
+    enabled: true
+    
+# this is credentials for spring security basic auth    
+  user:
+    name: maquendi
+    password: summer01
+   
+# setting paths where server will look up configuration files. 
+spring:
+  cloud:
+    config:
+      server:
+        encrypt:
+          enabled: false
+        git:
+          uri: https://github.com/Maquendi/github-based-configuration-server
+          search-paths: 
+             - 'station*'
+          
+          # links for https://github.com/Maquendi/github-based-configuration-server
+          # links:  localhost:8888/s1rates-dev.json, localhost:8888/s1rates-dev.yml, localhost:8888/s1rates-dev.json localhost:8888/s2rates/default, 
+          # links:  localhost:8888/s2rates-dev.json, localhost:8888/s2rates-dev.yml, localhost:8888/s2rates-dev.json localhost:8888/s2rates/default, 
+          
+          
+          repos:
+            perf:
+              pattern:
+                - "*/perf"
+              uri: https://github.com/Maquendi/github-based-configuration-server-performance
+              search-paths:
+                - 'station*'
+                
+          
+        
+
+          
+          
+          # links for performance repo
+          # links: localhost:8888/s3rates/perf, localhost:8888/s1rates/perf, 
+          
+            #in case you re using a private repository.
+          #username: maquendi 
+          # password: Maquendi1989
+          
+         
+          
+          
