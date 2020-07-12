@@ -10,8 +10,8 @@ security:
     
 # this is credentials for spring security basic auth    
   user:
-    name: maquendi
-    password: summer01
+    name: *********
+    password: *********
    
 # setting paths where server will look up configuration files. 
 spring:
@@ -47,8 +47,8 @@ spring:
           # links: localhost:8888/s3rates/perf, localhost:8888/s1rates/perf, 
           
             #in case you re using a private repository.
-          #username: maquendi 
-          # password: Maquendi1989
+          #username: ****** 
+          # password: *********
           
          
           
